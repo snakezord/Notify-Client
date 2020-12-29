@@ -1,0 +1,1 @@
+export { default } from './note-bottom-icons.component.jsx'
