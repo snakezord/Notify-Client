@@ -1,5 +1,4 @@
-{
-  "homepage": "http://snakezord.github.io/notify-client",
+{  
   "name": "notify-client",
   "version": "0.1.0",
   "type": "module",
