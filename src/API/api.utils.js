@@ -1,13 +1,14 @@
 import axios from 'axios'
 
 let axiosConfig = {
+  baseURL: 'https://roman-task-app.herokuapp.com',
   headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       "Access-Control-Allow-Origin": "*",
   }
 };
 
-export const setToken = token => {  
+export const setToken = token => { 
   axios.defaults.headers.common['Authorization'] = '';
   delete axios.defaults.headers.common['Authorization'];
 
