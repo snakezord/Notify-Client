@@ -1,5 +1,12 @@
 import axios from 'axios'
 
+let axiosConfig = {
+  headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+  }
+};
+
 export const setToken = token => {  
   axios.defaults.headers.common['Authorization'] = '';
   delete axios.defaults.headers.common['Authorization'];
@@ -11,7 +18,7 @@ export const setToken = token => {
 
 export const getData = async route => {
   try {    
-    const response = await axios.get(route)
+    const response = await axios.get(route, axiosConfig)
     return response
   } catch (error) {
     return error
@@ -19,7 +26,8 @@ export const getData = async route => {
 }
 export const postData = async (route, data) => {
   try {
-    const response = await axios.post(route, data)    
+    const response = await axios.post(route, data, axiosConfig)  
+    console.log('response', response)
     return response
   } catch (error) {
     return error
@@ -27,7 +35,7 @@ export const postData = async (route, data) => {
 }
 export const deleteData = async (route, _id) => {
   try {
-    const response = await axios.delete(`${route}/${_id}`)
+    const response = await axios.delete(`${route}/${_id}`, axiosConfig)
     return response
   } catch (error) {
     return error
@@ -37,7 +45,7 @@ export const updateData = async (route, data) => {
   try {
     const _id = data._id
     delete data._id    
-    const response = await axios.patch(`${route}/${_id}`, data)
+    const response = await axios.patch(`${route}/${_id}`, data, axiosConfig)
     return response
   } catch (error) {
     return error

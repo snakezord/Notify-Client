@@ -28,7 +28,7 @@ export const signInWithGoogleAsync = tokenId => async dispatch => {
   dispatch(fetchStart())
   try {
     const result = await postData('/users/google/login', { tokenId })
-
+    
     const { data } = result        
     if(!data) throw Error(result)
 
