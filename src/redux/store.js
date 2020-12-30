@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import logger from 'redux-logger'
+//import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { setToken } from '../API/api.utils'
 
@@ -13,7 +13,7 @@ const saveAuthToken = store => next => action => {
   return next(action);
 }
 
-const middlewares = [logger, thunk, saveAuthToken]
+const middlewares = [thunk, saveAuthToken]
 
 const store = createStore(rootReducer, applyMiddleware(...middlewares))
 

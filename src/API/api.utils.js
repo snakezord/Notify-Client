@@ -27,8 +27,7 @@ export const getData = async route => {
 }
 export const postData = async (route, data) => {
   try {
-    const response = await axios.post(route, data, axiosConfig)  
-    console.log('response', response)
+    const response = await axios.post(route, data, axiosConfig)      
     return response
   } catch (error) {
     return error
