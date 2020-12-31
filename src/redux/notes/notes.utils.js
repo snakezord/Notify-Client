@@ -9,7 +9,7 @@ const options = {
   ]
 };
 export const addNote = (notesCollection, newNote) => {
-  notesCollection.push(newNote)
+  notesCollection.unshift(newNote)
   return [...notesCollection]
 }
 export const removeNote = (notesCollection, _id) => {

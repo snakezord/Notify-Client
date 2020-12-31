@@ -4,6 +4,7 @@ export const ToggleContainer = styled.button`
   position: fixed;
   bottom: 2%;
   right: 2%;
+  z-index: 100;
 
   display: flex;
   justify-content: space-between;

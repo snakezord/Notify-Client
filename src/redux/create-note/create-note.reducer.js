@@ -43,7 +43,7 @@ const createNoteReducer = (state = INITIAL__STATE, action) => {
           }
         case CreateNoteActionTypes.RESET_STATE:
           return {
-            ...state,            
+            ...INITIAL__STATE
           }
         default:
             return state

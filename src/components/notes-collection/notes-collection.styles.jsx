@@ -14,6 +14,9 @@ export const Container = styled.div`
   : `padding-left: 4rem;`}`}  
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 870px) {
+    padding-bottom: 4rem;
+  }
   @media screen and (max-width: 690px) {
     padding-left: 4rem;
   }
