@@ -13,6 +13,6 @@ export default {
     boxShadow: '#000000',
     boxShadowSecondary: '#000000',
     toggleBorder: '#6B8096',
-    gradient: 'linear-gradient(#091236, #1E215D)',
+    gradient: 'linear-gradient(#091236E6, #1E215DE6)',
   }
 }
